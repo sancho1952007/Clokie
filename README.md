@@ -2,7 +2,7 @@
 
 ## ***What Is Clokie?***
 >- *Clokie* is An Awesome Clock Built in HTML, CSS &amp; JS With Dark Mode.
->- You Can Even Change Colours If The Numbers in *Clokie*.
+>- You Can Even Change Colours Of The Numbers in *Clokie*.
 
 <br>
 
