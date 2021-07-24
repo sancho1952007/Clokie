@@ -35,6 +35,18 @@
     
     seconds()
 
+    
+    //Dark Mode Detect...
+    
+    let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if(matched){
+	  darkMode()
+    }
+    
+    else{
+	  lightMode() 
+    }
 
     //Change Colour Code...
 
