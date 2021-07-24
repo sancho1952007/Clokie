@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clokie</title>
+</head>
+<body onselectstart="return false" onmousedown="return false" oncontextmenu="return false" id='body'>
+    <a href="https://github.com/sancho1952007/Clokie" target='_blank' id='link'>Fork/Star On Github <img src='images/link.png' id='link_icon'></a>
+    <center><h1 id='time'>Loading Time...</h1></center>
+    <center>
+        <button onclick='SwitchToRed()' id='red'>Red</button>
+        <button onclick='SwitchToGreen()' id='green'>Green</button id='red'>
+        <button onclick='SwitchToBlue()' id='blue'>Blue</button>
+        <button onclick='SwitchToBlack()' id='black'>Black</button>
+        <button onclick='SwitchToWhite()' id='white'>White</button>
+    </center>
+    <center>
+        <button id='light' onclick='lightMode()'>Light</button>
+        <button id='dark' onclick='darkMode()'>Dark</button>
+    </center>
+</body>
+<script>
+    function color(clr){
+        document.getElementById('time').style.color = clr;
+    }
+    function seconds(){
+        var time=new Date();
+        document.getElementById('time').innerHTML = time.getHours()+" : "+time.getMinutes()+' : '+time.getSeconds();
+        setTimeout(seconds, 50)
+    }
+    
+    seconds()
+
+
+    //Change Colour Code...
+
+    function SwitchToRed(){
+        color('red')
+    }
+
+    function SwitchToGreen(){
+        color('green')
+    }
+
+    function SwitchToBlue(){
+        color('blue')
+    }
+
+    function SwitchToBlack(){
+        color('black')
+    }
+
+    function SwitchToWhite(){
+        color('#e3e1e1')
+    }
+
+
+    function darkMode(){
+        color('white')
+        document.getElementById('body').style.backgroundColor = '#242424';
+        document.getElementById('link').style.color='lightblue';
+        document.getElementById('link_icon').src='images/link_.png';
+    }
+
+    function lightMode(){
+        color('black')
+        document.getElementById('body').style.backgroundColor = 'white';
+        document.getElementById('link').style.color='blue';
+        document.getElementById('link_icon').src='images/link.png'
+    }
+</script>
+<style>
+    html{
+        cursor: url('images/cursor.png'), default;
+    }
+    #time{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 150px;
+    }
+    body{
+        background-color: lightblue;
+    }
+    h1{
+        text-align: center;
+        border: 10px solid;
+        border-color: #39FF14;
+        border-radius: 75px;
+    }
+    a{
+        color: blue;
+        font-family: 'Courier New', Courier, monospace;
+        cursor: url('images/hand.png'), default;
+    }
+    button{
+        width: 10%;
+        height: 8vh;
+        margin-right: 10px;
+        border-style: outset;
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        cursor: url('images/hand.png'), default;
+        margin-bottom: 10px;
+    }
+    #green{
+        background-color: green;
+        border: 2px solid green;
+        transition: all .50s linear;
+    }
+    #green:hover{
+        background-color: lightgreen;
+        border-color: lightgreen;
+    }
+
+    #red{
+        background-color: red;
+        border: 2px solid red;
+        transition: all .50s linear;
+    }
+    #red:hover{
+        background-color: lightpink;
+        border-color: lightpink;
+    }
+
+    #blue{
+        background-color: blue;
+        border: 2px solid blue;
+        transition: all .50s linear;
+    }
+    #blue:hover{
+        background-color: rgb(158, 158, 190);
+        border-color: rgb(158, 158, 190);
+    }
+
+    #black{
+        color: white;
+        background-color: black;
+        border: 2px solid black;
+        transition: all .50s linear;
+    }
+    #black:hover{
+        color: black;
+        background-color: grey;
+        border-color: grey;
+    }
+
+    #white{
+        background-color: #dbd7d7;
+        border: 2px solid #dbd7d7;
+        transition: all .50s linear;
+    }
+    #white:hover{
+        background-color: #b0a9a9;
+        border-color: #b0a9a9;
+    }
+
+
+    #light{
+        background-color: #dbd7d7;
+        border: 2px solid #dbd7d7;
+        transition: all .50s linear;
+    }
+    #light:hover{
+        background-color: #b0a9a9;
+        border-color: #b0a9a9;
+    }
+
+    #dark{
+        color: white;
+        background-color: black;
+        border: 2px solid black;
+        transition: all .50s linear;
+    }
+    #dark:hover{
+        background-color: darkgrey;
+        border-color: darkgrey;
+    }
+</style>
+<script src="scripts/Block_Keys.js"></script>
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</html>
