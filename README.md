@@ -15,6 +15,11 @@
 > Just Click **[Here](https://sancho1952007.github.io/Clokie/)** to get To The Website...
 
 <br>
+
+# ***When Will It Get Updated?***
+> This Repo. Will Get Updated After 50 Stars and or 10 Forks.
+
+<br>
 <br>
 
 # *Thank You :)*
